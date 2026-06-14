@@ -6,8 +6,10 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "audit_logs")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class AuditLog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

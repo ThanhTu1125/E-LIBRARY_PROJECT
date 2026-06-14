@@ -6,8 +6,10 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "fines")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Fine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

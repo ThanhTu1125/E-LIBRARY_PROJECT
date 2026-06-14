@@ -5,8 +5,10 @@ import lombok.*;
 
 @Entity
 @Table(name = "blockchain_ledger")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class BlockchainLedger {
     @Id
     @Column(name = "block_index")

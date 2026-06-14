@@ -6,8 +6,10 @@ import lombok.*;
 @Entity
 @Table(name = "book_authors")
 @IdClass(BookAuthorId.class)
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class BookAuthor {
     @Id
     @Column(name = "book_id")

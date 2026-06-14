@@ -5,8 +5,10 @@ import lombok.*;
 
 @Entity
 @Table(name = "user_preferences")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserPreference {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

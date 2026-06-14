@@ -5,8 +5,10 @@ import lombok.*;
 
 @Entity
 @Table(name = "blockchain_transactions")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class BlockchainTransaction {
     @Id
     @Column(name = "tx_id", length = 64)
