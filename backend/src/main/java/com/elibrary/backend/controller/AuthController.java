@@ -1,23 +1,31 @@
 package com.elibrary.backend.controller;
 
+import com.elibrary.backend.dto.LoginRequest;
+import com.elibrary.backend.dto.RegisterRequest;
 import com.elibrary.backend.model.User;
 import com.elibrary.backend.service.AuthService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "*") // Cho phép React gọi API không bị lỗi CORS
+@CrossOrigin(origins = "*")
+@RequiredArgsConstructor
 public class AuthController {
 
-    @Autowired
     private AuthService authService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody User user) {
+    public ResponseEntity<?> registerUser(@RequestBody RegisterRequest request) {
         try {
+            // Chuyển dữ liệu từ DTO sang Entity
+            User user = new User();
+            user.setUsername(request.username());
+            user.setPassword(request.password());
+            user.setEmail(request.email());
+            user.setFullName(request.fullName());
+
             User registeredUser = authService.register(user);
             return ResponseEntity.ok(registeredUser);
         } catch (Exception e) {
@@ -26,11 +34,9 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestBody Map<String, String> loginData) {
+    public ResponseEntity<?> loginUser(@RequestBody LoginRequest request) {
         try {
-            String username = loginData.get("username");
-            String password = loginData.get("password");
-            User user = authService.login(username, password);
+            User user = authService.login(request.username(), request.password());
             return ResponseEntity.ok(user);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());

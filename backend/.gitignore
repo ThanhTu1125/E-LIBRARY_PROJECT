@@ -1,33 +1,57 @@
-HELP.md
+# ==========================================
+# CẤU HÌNH GITIGNORE TỐI ƯU CHO DỰ ÁN E-LIBRARY
+# IDE: VS Code | Backend: Spring Boot | Frontend: React | AI: Python
+# ==========================================
+
+# 1. Spring Boot & Maven (Backend)
 target/
-.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+HELP.md
 
-### STS ###
-.apt_generated
+# 2. VS Code & Java Language Server (Quan trọng)
+.vscode/
 .classpath
 .factorypath
 .project
-.settings
-.springBeans
-.sts4-cache
+.settings/
+.apt_generated/
+*.code-workspace
 
-### IntelliJ IDEA ###
-.idea
+# 3. Node.js & React (Frontend - Dành cho sau này)
+node_modules/
+dist/
+build/
+.env
+.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 4. Python (AI Recommendation - Dành cho sau này)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+
+# 5. Hệ điều hành (Windows/macOS rác)
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# 6. Các IDE khác (Đề phòng người khác clone code của bro dùng IDE khác)
+.idea/
 *.iws
 *.iml
 *.ipr
-
-### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
+.springBeans
+.sts4-cache
