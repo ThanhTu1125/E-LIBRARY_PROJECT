@@ -7,5 +7,6 @@ import java.util.List;
 public interface FineRepository extends JpaRepository<Fine, Integer> {
     List<Fine> findByStatus(String status);
 
-    List<Fine> findByBorrowingUserId(Integer userId);
+    List<Fine> findByUserId(Integer userId);
+
 }

@@ -5,6 +5,7 @@ import com.elibrary.backend.service.BorrowingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.lang.NonNull;
 
 @RestController
 @RequestMapping("/api/borrowings")
@@ -14,11 +15,19 @@ public class BorrowingController {
 
     private final BorrowingService borrowingService;
 
-    // API xử lý luồng mượn sách
     @PostMapping
     public ResponseEntity<?> borrowBook(@RequestBody BorrowingRequest request) {
         try {
             return ResponseEntity.ok(borrowingService.borrowBook(request));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PutMapping("/{id}/return")
+    public ResponseEntity<?> returnBook(@PathVariable @NonNull Integer id) {
+        try {
+            return ResponseEntity.ok(borrowingService.returnBook(id));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
