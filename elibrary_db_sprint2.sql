@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict HnNAlVZlamILzJBnIHjWr01LB5EGt2pBDgZCX3Hk9wKBcehUoJmotlJCMUE4wXG
+\restrict D3gXhe0057HKcqGLGIBE2NmHMRSkgQvddbCSkZHt0xNBM44uTb3MtRVbXqByGRr
 
 -- Dumped from database version 16.14
 -- Dumped by pg_dump version 16.14
 
--- Started on 2026-06-04 21:19:45
+-- Started on 2026-06-20 01:26:13
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -26,7 +26,7 @@ SET default_table_access_method = heap;
 
 --
 -- TOC entry 239 (class 1259 OID 17116)
--- Name: audit_logs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: audit_logs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.audit_logs (
@@ -38,11 +38,9 @@ CREATE TABLE public.audit_logs (
 );
 
 
-ALTER TABLE public.audit_logs OWNER TO postgres;
-
 --
 -- TOC entry 238 (class 1259 OID 17115)
--- Name: audit_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: audit_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.audit_logs_id_seq
@@ -53,12 +51,10 @@ CREATE SEQUENCE public.audit_logs_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.audit_logs_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5082 (class 0 OID 0)
+-- TOC entry 5083 (class 0 OID 0)
 -- Dependencies: 238
--- Name: audit_logs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: audit_logs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.audit_logs_id_seq OWNED BY public.audit_logs.id;
@@ -66,7 +62,7 @@ ALTER SEQUENCE public.audit_logs_id_seq OWNED BY public.audit_logs.id;
 
 --
 -- TOC entry 222 (class 1259 OID 16970)
--- Name: authors; Type: TABLE; Schema: public; Owner: postgres
+-- Name: authors; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.authors (
@@ -76,11 +72,9 @@ CREATE TABLE public.authors (
 );
 
 
-ALTER TABLE public.authors OWNER TO postgres;
-
 --
 -- TOC entry 221 (class 1259 OID 16969)
--- Name: authors_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: authors_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.authors_id_seq
@@ -92,12 +86,10 @@ CREATE SEQUENCE public.authors_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.authors_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5083 (class 0 OID 0)
+-- TOC entry 5084 (class 0 OID 0)
 -- Dependencies: 221
--- Name: authors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: authors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.authors_id_seq OWNED BY public.authors.id;
@@ -105,7 +97,7 @@ ALTER SEQUENCE public.authors_id_seq OWNED BY public.authors.id;
 
 --
 -- TOC entry 236 (class 1259 OID 17097)
--- Name: blockchain_ledger; Type: TABLE; Schema: public; Owner: postgres
+-- Name: blockchain_ledger; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.blockchain_ledger (
@@ -117,11 +109,9 @@ CREATE TABLE public.blockchain_ledger (
 );
 
 
-ALTER TABLE public.blockchain_ledger OWNER TO postgres;
-
 --
 -- TOC entry 237 (class 1259 OID 17103)
--- Name: blockchain_transactions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: blockchain_transactions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.blockchain_transactions (
@@ -133,11 +123,9 @@ CREATE TABLE public.blockchain_transactions (
 );
 
 
-ALTER TABLE public.blockchain_transactions OWNER TO postgres;
-
 --
 -- TOC entry 223 (class 1259 OID 16978)
--- Name: book_authors; Type: TABLE; Schema: public; Owner: postgres
+-- Name: book_authors; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.book_authors (
@@ -146,11 +134,9 @@ CREATE TABLE public.book_authors (
 );
 
 
-ALTER TABLE public.book_authors OWNER TO postgres;
-
 --
 -- TOC entry 227 (class 1259 OID 17003)
--- Name: book_copies; Type: TABLE; Schema: public; Owner: postgres
+-- Name: book_copies; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.book_copies (
@@ -162,11 +148,9 @@ CREATE TABLE public.book_copies (
 );
 
 
-ALTER TABLE public.book_copies OWNER TO postgres;
-
 --
 -- TOC entry 226 (class 1259 OID 17002)
--- Name: book_copies_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: book_copies_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.book_copies_id_seq
@@ -178,12 +162,10 @@ CREATE SEQUENCE public.book_copies_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.book_copies_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5084 (class 0 OID 0)
+-- TOC entry 5085 (class 0 OID 0)
 -- Dependencies: 226
--- Name: book_copies_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: book_copies_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.book_copies_id_seq OWNED BY public.book_copies.id;
@@ -191,7 +173,7 @@ ALTER SEQUENCE public.book_copies_id_seq OWNED BY public.book_copies.id;
 
 --
 -- TOC entry 220 (class 1259 OID 16952)
--- Name: books; Type: TABLE; Schema: public; Owner: postgres
+-- Name: books; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.books (
@@ -208,11 +190,9 @@ CREATE TABLE public.books (
 );
 
 
-ALTER TABLE public.books OWNER TO postgres;
-
 --
 -- TOC entry 219 (class 1259 OID 16951)
--- Name: books_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: books_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.books_id_seq
@@ -224,12 +204,10 @@ CREATE SEQUENCE public.books_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.books_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5085 (class 0 OID 0)
+-- TOC entry 5086 (class 0 OID 0)
 -- Dependencies: 219
--- Name: books_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: books_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.books_id_seq OWNED BY public.books.id;
@@ -237,7 +215,7 @@ ALTER SEQUENCE public.books_id_seq OWNED BY public.books.id;
 
 --
 -- TOC entry 229 (class 1259 OID 17024)
--- Name: borrowings; Type: TABLE; Schema: public; Owner: postgres
+-- Name: borrowings; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.borrowings (
@@ -253,11 +231,9 @@ CREATE TABLE public.borrowings (
 );
 
 
-ALTER TABLE public.borrowings OWNER TO postgres;
-
 --
 -- TOC entry 228 (class 1259 OID 17023)
--- Name: borrowings_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: borrowings_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.borrowings_id_seq
@@ -269,12 +245,10 @@ CREATE SEQUENCE public.borrowings_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.borrowings_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5086 (class 0 OID 0)
+-- TOC entry 5087 (class 0 OID 0)
 -- Dependencies: 228
--- Name: borrowings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: borrowings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.borrowings_id_seq OWNED BY public.borrowings.id;
@@ -282,7 +256,7 @@ ALTER SEQUENCE public.borrowings_id_seq OWNED BY public.borrowings.id;
 
 --
 -- TOC entry 225 (class 1259 OID 16994)
--- Name: branches; Type: TABLE; Schema: public; Owner: postgres
+-- Name: branches; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.branches (
@@ -292,11 +266,9 @@ CREATE TABLE public.branches (
 );
 
 
-ALTER TABLE public.branches OWNER TO postgres;
-
 --
 -- TOC entry 224 (class 1259 OID 16993)
--- Name: branches_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: branches_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.branches_id_seq
@@ -308,12 +280,10 @@ CREATE SEQUENCE public.branches_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.branches_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5087 (class 0 OID 0)
+-- TOC entry 5088 (class 0 OID 0)
 -- Dependencies: 224
--- Name: branches_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: branches_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.branches_id_seq OWNED BY public.branches.id;
@@ -321,7 +291,7 @@ ALTER SEQUENCE public.branches_id_seq OWNED BY public.branches.id;
 
 --
 -- TOC entry 218 (class 1259 OID 16941)
--- Name: categories; Type: TABLE; Schema: public; Owner: postgres
+-- Name: categories; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.categories (
@@ -331,11 +301,9 @@ CREATE TABLE public.categories (
 );
 
 
-ALTER TABLE public.categories OWNER TO postgres;
-
 --
 -- TOC entry 217 (class 1259 OID 16940)
--- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.categories_id_seq
@@ -347,12 +315,10 @@ CREATE SEQUENCE public.categories_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.categories_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5088 (class 0 OID 0)
+-- TOC entry 5089 (class 0 OID 0)
 -- Dependencies: 217
--- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.categories_id_seq OWNED BY public.categories.id;
@@ -360,7 +326,7 @@ ALTER SEQUENCE public.categories_id_seq OWNED BY public.categories.id;
 
 --
 -- TOC entry 231 (class 1259 OID 17043)
--- Name: fines; Type: TABLE; Schema: public; Owner: postgres
+-- Name: fines; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.fines (
@@ -368,15 +334,15 @@ CREATE TABLE public.fines (
     borrowing_id integer NOT NULL,
     fine_amount numeric(10,2) NOT NULL,
     status character varying(30) DEFAULT 'UNPAID'::character varying NOT NULL,
-    tx_hash character varying(64)
+    tx_hash character varying(64),
+    reason character varying(255) NOT NULL,
+    user_id integer NOT NULL
 );
 
 
-ALTER TABLE public.fines OWNER TO postgres;
-
 --
 -- TOC entry 230 (class 1259 OID 17042)
--- Name: fines_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: fines_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.fines_id_seq
@@ -388,12 +354,10 @@ CREATE SEQUENCE public.fines_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.fines_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5089 (class 0 OID 0)
+-- TOC entry 5090 (class 0 OID 0)
 -- Dependencies: 230
--- Name: fines_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: fines_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.fines_id_seq OWNED BY public.fines.id;
@@ -401,7 +365,7 @@ ALTER SEQUENCE public.fines_id_seq OWNED BY public.fines.id;
 
 --
 -- TOC entry 235 (class 1259 OID 17077)
--- Name: reading_history; Type: TABLE; Schema: public; Owner: postgres
+-- Name: reading_history; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.reading_history (
@@ -413,11 +377,9 @@ CREATE TABLE public.reading_history (
 );
 
 
-ALTER TABLE public.reading_history OWNER TO postgres;
-
 --
 -- TOC entry 234 (class 1259 OID 17076)
--- Name: reading_history_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: reading_history_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.reading_history_id_seq
@@ -429,12 +391,10 @@ CREATE SEQUENCE public.reading_history_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.reading_history_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5090 (class 0 OID 0)
+-- TOC entry 5091 (class 0 OID 0)
 -- Dependencies: 234
--- Name: reading_history_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: reading_history_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.reading_history_id_seq OWNED BY public.reading_history.id;
@@ -442,7 +402,7 @@ ALTER SEQUENCE public.reading_history_id_seq OWNED BY public.reading_history.id;
 
 --
 -- TOC entry 243 (class 1259 OID 17150)
--- Name: recommendations; Type: TABLE; Schema: public; Owner: postgres
+-- Name: recommendations; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.recommendations (
@@ -454,11 +414,9 @@ CREATE TABLE public.recommendations (
 );
 
 
-ALTER TABLE public.recommendations OWNER TO postgres;
-
 --
 -- TOC entry 242 (class 1259 OID 17149)
--- Name: recommendations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: recommendations_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.recommendations_id_seq
@@ -470,12 +428,10 @@ CREATE SEQUENCE public.recommendations_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.recommendations_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5091 (class 0 OID 0)
+-- TOC entry 5092 (class 0 OID 0)
 -- Dependencies: 242
--- Name: recommendations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: recommendations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.recommendations_id_seq OWNED BY public.recommendations.id;
@@ -483,7 +439,7 @@ ALTER SEQUENCE public.recommendations_id_seq OWNED BY public.recommendations.id;
 
 --
 -- TOC entry 233 (class 1259 OID 17056)
--- Name: reviews; Type: TABLE; Schema: public; Owner: postgres
+-- Name: reviews; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.reviews (
@@ -497,11 +453,9 @@ CREATE TABLE public.reviews (
 );
 
 
-ALTER TABLE public.reviews OWNER TO postgres;
-
 --
 -- TOC entry 232 (class 1259 OID 17055)
--- Name: reviews_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: reviews_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.reviews_id_seq
@@ -513,12 +467,10 @@ CREATE SEQUENCE public.reviews_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.reviews_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5092 (class 0 OID 0)
+-- TOC entry 5093 (class 0 OID 0)
 -- Dependencies: 232
--- Name: reviews_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: reviews_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.reviews_id_seq OWNED BY public.reviews.id;
@@ -526,7 +478,7 @@ ALTER SEQUENCE public.reviews_id_seq OWNED BY public.reviews.id;
 
 --
 -- TOC entry 241 (class 1259 OID 17132)
--- Name: user_preferences; Type: TABLE; Schema: public; Owner: postgres
+-- Name: user_preferences; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.user_preferences (
@@ -538,11 +490,9 @@ CREATE TABLE public.user_preferences (
 );
 
 
-ALTER TABLE public.user_preferences OWNER TO postgres;
-
 --
 -- TOC entry 240 (class 1259 OID 17131)
--- Name: user_preferences_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: user_preferences_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.user_preferences_id_seq
@@ -554,12 +504,10 @@ CREATE SEQUENCE public.user_preferences_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.user_preferences_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5093 (class 0 OID 0)
+-- TOC entry 5094 (class 0 OID 0)
 -- Dependencies: 240
--- Name: user_preferences_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: user_preferences_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.user_preferences_id_seq OWNED BY public.user_preferences.id;
@@ -567,7 +515,7 @@ ALTER SEQUENCE public.user_preferences_id_seq OWNED BY public.user_preferences.i
 
 --
 -- TOC entry 216 (class 1259 OID 16923)
--- Name: users; Type: TABLE; Schema: public; Owner: postgres
+-- Name: users; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.users (
@@ -583,11 +531,9 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO postgres;
-
 --
 -- TOC entry 215 (class 1259 OID 16922)
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.users_id_seq
@@ -599,12 +545,10 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.users_id_seq OWNER TO postgres;
-
 --
--- TOC entry 5094 (class 0 OID 0)
+-- TOC entry 5095 (class 0 OID 0)
 -- Dependencies: 215
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
@@ -612,7 +556,7 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 --
 -- TOC entry 4828 (class 2604 OID 17119)
--- Name: audit_logs id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: audit_logs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.audit_logs ALTER COLUMN id SET DEFAULT nextval('public.audit_logs_id_seq'::regclass);
@@ -620,7 +564,7 @@ ALTER TABLE ONLY public.audit_logs ALTER COLUMN id SET DEFAULT nextval('public.a
 
 --
 -- TOC entry 4815 (class 2604 OID 16973)
--- Name: authors id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: authors id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.authors ALTER COLUMN id SET DEFAULT nextval('public.authors_id_seq'::regclass);
@@ -628,7 +572,7 @@ ALTER TABLE ONLY public.authors ALTER COLUMN id SET DEFAULT nextval('public.auth
 
 --
 -- TOC entry 4817 (class 2604 OID 17006)
--- Name: book_copies id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: book_copies id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.book_copies ALTER COLUMN id SET DEFAULT nextval('public.book_copies_id_seq'::regclass);
@@ -636,7 +580,7 @@ ALTER TABLE ONLY public.book_copies ALTER COLUMN id SET DEFAULT nextval('public.
 
 --
 -- TOC entry 4813 (class 2604 OID 16955)
--- Name: books id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: books id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.books ALTER COLUMN id SET DEFAULT nextval('public.books_id_seq'::regclass);
@@ -644,7 +588,7 @@ ALTER TABLE ONLY public.books ALTER COLUMN id SET DEFAULT nextval('public.books_
 
 --
 -- TOC entry 4819 (class 2604 OID 17027)
--- Name: borrowings id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: borrowings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.borrowings ALTER COLUMN id SET DEFAULT nextval('public.borrowings_id_seq'::regclass);
@@ -652,7 +596,7 @@ ALTER TABLE ONLY public.borrowings ALTER COLUMN id SET DEFAULT nextval('public.b
 
 --
 -- TOC entry 4816 (class 2604 OID 16997)
--- Name: branches id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: branches id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.branches ALTER COLUMN id SET DEFAULT nextval('public.branches_id_seq'::regclass);
@@ -660,7 +604,7 @@ ALTER TABLE ONLY public.branches ALTER COLUMN id SET DEFAULT nextval('public.bra
 
 --
 -- TOC entry 4812 (class 2604 OID 16944)
--- Name: categories id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: categories id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN id SET DEFAULT nextval('public.categories_id_seq'::regclass);
@@ -668,7 +612,7 @@ ALTER TABLE ONLY public.categories ALTER COLUMN id SET DEFAULT nextval('public.c
 
 --
 -- TOC entry 4821 (class 2604 OID 17046)
--- Name: fines id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: fines id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.fines ALTER COLUMN id SET DEFAULT nextval('public.fines_id_seq'::regclass);
@@ -676,7 +620,7 @@ ALTER TABLE ONLY public.fines ALTER COLUMN id SET DEFAULT nextval('public.fines_
 
 --
 -- TOC entry 4825 (class 2604 OID 17080)
--- Name: reading_history id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: reading_history id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.reading_history ALTER COLUMN id SET DEFAULT nextval('public.reading_history_id_seq'::regclass);
@@ -684,7 +628,7 @@ ALTER TABLE ONLY public.reading_history ALTER COLUMN id SET DEFAULT nextval('pub
 
 --
 -- TOC entry 4832 (class 2604 OID 17153)
--- Name: recommendations id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: recommendations id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.recommendations ALTER COLUMN id SET DEFAULT nextval('public.recommendations_id_seq'::regclass);
@@ -692,7 +636,7 @@ ALTER TABLE ONLY public.recommendations ALTER COLUMN id SET DEFAULT nextval('pub
 
 --
 -- TOC entry 4823 (class 2604 OID 17059)
--- Name: reviews id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: reviews id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.reviews ALTER COLUMN id SET DEFAULT nextval('public.reviews_id_seq'::regclass);
@@ -700,7 +644,7 @@ ALTER TABLE ONLY public.reviews ALTER COLUMN id SET DEFAULT nextval('public.revi
 
 --
 -- TOC entry 4830 (class 2604 OID 17135)
--- Name: user_preferences id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: user_preferences id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.user_preferences ALTER COLUMN id SET DEFAULT nextval('public.user_preferences_id_seq'::regclass);
@@ -708,301 +652,285 @@ ALTER TABLE ONLY public.user_preferences ALTER COLUMN id SET DEFAULT nextval('pu
 
 --
 -- TOC entry 4807 (class 2604 OID 16926)
--- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
--- TOC entry 5072 (class 0 OID 17116)
+-- TOC entry 5073 (class 0 OID 17116)
 -- Dependencies: 239
--- Data for Name: audit_logs; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: audit_logs; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.audit_logs (id, user_id, action, details, "timestamp") FROM stdin;
-\.
 
 
 --
--- TOC entry 5055 (class 0 OID 16970)
+-- TOC entry 5056 (class 0 OID 16970)
 -- Dependencies: 222
--- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.authors (id, name, biography) FROM stdin;
-\.
 
 
 --
--- TOC entry 5069 (class 0 OID 17097)
+-- TOC entry 5070 (class 0 OID 17097)
 -- Dependencies: 236
--- Data for Name: blockchain_ledger; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: blockchain_ledger; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.blockchain_ledger (block_index, "timestamp", proof_of_work, previous_hash, current_hash) FROM stdin;
-\.
 
 
 --
--- TOC entry 5070 (class 0 OID 17103)
+-- TOC entry 5071 (class 0 OID 17103)
 -- Dependencies: 237
--- Data for Name: blockchain_transactions; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: blockchain_transactions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.blockchain_transactions (tx_id, block_index, reference_type, reference_id, data_payload) FROM stdin;
-\.
 
 
 --
--- TOC entry 5056 (class 0 OID 16978)
+-- TOC entry 5057 (class 0 OID 16978)
 -- Dependencies: 223
--- Data for Name: book_authors; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: book_authors; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.book_authors (book_id, author_id) FROM stdin;
-\.
 
 
 --
--- TOC entry 5060 (class 0 OID 17003)
+-- TOC entry 5061 (class 0 OID 17003)
 -- Dependencies: 227
--- Data for Name: book_copies; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: book_copies; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.book_copies (id, book_id, branch_id, barcode, status) FROM stdin;
-\.
+INSERT INTO public.book_copies VALUES (1, 1, 1, 'LIB-B1-7233D799', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (2, 1, 1, 'LIB-B1-8DD18058', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (3, 1, 1, 'LIB-B1-101521F6', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (4, 1, 1, 'LIB-B1-FF1F4FEB', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (5, 1, 1, 'LIB-B1-3C3F5AF6', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (7, 1, 1, 'LIB-B1-EF89D0CC', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (8, 1, 1, 'LIB-B1-987526F0', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (9, 1, 1, 'LIB-B1-5DFC0074', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (10, 1, 1, 'LIB-B1-1E937614', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (6, 1, 1, 'LIB-B1-209E8A75', 'AVAILABLE');
 
 
 --
--- TOC entry 5053 (class 0 OID 16952)
+-- TOC entry 5054 (class 0 OID 16952)
 -- Dependencies: 220
--- Data for Name: books; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: books; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.books (id, category_id, title, isbn, publisher, publish_year, ebook_url, cover_image, view_count, file_hash) FROM stdin;
-\.
+INSERT INTO public.books VALUES (1, 1, 'Lập Trình Spring Boot Từ A-Z', 'ISBN-9999-8888', 'VKU Publisher', 2026, NULL, NULL, 0, NULL);
 
 
 --
--- TOC entry 5062 (class 0 OID 17024)
+-- TOC entry 5063 (class 0 OID 17024)
 -- Dependencies: 229
--- Data for Name: borrowings; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: borrowings; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.borrowings (id, user_id, book_copy_id, borrow_date, due_date, return_date, status, tx_hash, block_index) FROM stdin;
-\.
+INSERT INTO public.borrowings VALUES (1, 4, 6, '2026-06-14', '2026-06-01', '2026-06-19', 'RETURNED', NULL, NULL);
 
 
 --
--- TOC entry 5058 (class 0 OID 16994)
+-- TOC entry 5059 (class 0 OID 16994)
 -- Dependencies: 225
--- Data for Name: branches; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: branches; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.branches (id, name, location) FROM stdin;
-1	Thư viện Trung tâm - Khu A	Tầng 2, Tòa nhà Hiệu bộ Khu A
-2	Thư viện Số - Khu B	Tầng 1, Tòa nhà Đa năng Khu B
-\.
+INSERT INTO public.branches VALUES (1, 'Thư viện Trung tâm - Khu A', 'Tầng 2, Tòa nhà Hiệu bộ Khu A');
+INSERT INTO public.branches VALUES (2, 'Thư viện Số - Khu B', 'Tầng 1, Tòa nhà Đa năng Khu B');
 
 
 --
--- TOC entry 5051 (class 0 OID 16941)
+-- TOC entry 5052 (class 0 OID 16941)
 -- Dependencies: 218
--- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.categories (id, name, description) FROM stdin;
-1	Lập Trình Java	Giáo trình về ngôn ngữ Java, cấu trúc Spring Boot và hệ sinh thái Backend liên quan.
-2	Khoa Học Máy Tính	Tài liệu lý thuyết về cấu trúc dữ liệu, giải thuật và hệ điều hành.
-3	Blockchain & Mật Mã Học	Tài liệu nghiên cứu hệ thống phi tập trung, mã hóa và bảo mật dữ liệu.
-4	Trí Tuệ Nhân Tạo & ML	Sách nghiên cứu về các mô hình toán học, học máy, học sâu.
-\.
+INSERT INTO public.categories VALUES (1, 'Lập Trình Java', 'Giáo trình về ngôn ngữ Java, cấu trúc Spring Boot và hệ sinh thái Backend liên quan.');
+INSERT INTO public.categories VALUES (2, 'Khoa Học Máy Tính', 'Tài liệu lý thuyết về cấu trúc dữ liệu, giải thuật và hệ điều hành.');
+INSERT INTO public.categories VALUES (3, 'Blockchain & Mật Mã Học', 'Tài liệu nghiên cứu hệ thống phi tập trung, mã hóa và bảo mật dữ liệu.');
+INSERT INTO public.categories VALUES (4, 'Trí Tuệ Nhân Tạo & ML', 'Sách nghiên cứu về các mô hình toán học, học máy, học sâu.');
 
 
 --
--- TOC entry 5064 (class 0 OID 17043)
+-- TOC entry 5065 (class 0 OID 17043)
 -- Dependencies: 231
--- Data for Name: fines; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: fines; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.fines (id, borrowing_id, fine_amount, status, tx_hash) FROM stdin;
-\.
+INSERT INTO public.fines VALUES (1, 1, 90000.00, 'UNPAID', NULL, 'Trả trễ 18 ngày', 4);
+INSERT INTO public.fines VALUES (2, 1, 90000.00, 'UNPAID', NULL, 'Trả trễ 18 ngày', 4);
+INSERT INTO public.fines VALUES (3, 1, 90000.00, 'UNPAID', NULL, 'Trả trễ 18 ngày', 4);
 
 
 --
--- TOC entry 5068 (class 0 OID 17077)
+-- TOC entry 5069 (class 0 OID 17077)
 -- Dependencies: 235
--- Data for Name: reading_history; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: reading_history; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.reading_history (id, user_id, book_id, last_read_page, updated_at) FROM stdin;
-\.
 
 
 --
--- TOC entry 5076 (class 0 OID 17150)
+-- TOC entry 5077 (class 0 OID 17150)
 -- Dependencies: 243
--- Data for Name: recommendations; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: recommendations; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.recommendations (id, user_id, book_id, score, calculated_at) FROM stdin;
-\.
 
 
 --
--- TOC entry 5066 (class 0 OID 17056)
+-- TOC entry 5067 (class 0 OID 17056)
 -- Dependencies: 233
--- Data for Name: reviews; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: reviews; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.reviews (id, user_id, book_id, rating, comment, created_at) FROM stdin;
-\.
 
 
 --
--- TOC entry 5074 (class 0 OID 17132)
+-- TOC entry 5075 (class 0 OID 17132)
 -- Dependencies: 241
--- Data for Name: user_preferences; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: user_preferences; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.user_preferences (id, user_id, category_id, interaction_type, weight) FROM stdin;
-\.
 
 
 --
--- TOC entry 5049 (class 0 OID 16923)
+-- TOC entry 5050 (class 0 OID 16923)
 -- Dependencies: 216
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.users (id, username, password, email, full_name, role, status, created_at, updated_at) FROM stdin;
-1	admin_sys	$2a$10$dXJ3Z6bQ7G9bX8Yf1A2bC.e8V0uO1w2x3y4z5A6B7C8D9E0F1G2H3	admin@elibrary.edu.vn	Nguyễn Quản Trị Hệ Thống	ROLE_ADMIN	t	2026-06-04 21:08:08.164871	2026-06-04 21:08:08.164871
-2	librarian_01	$2a$10$dXJ3Z6bQ7G9bX8Yf1A2bC.e8V0uO1w2x3y4z5A6B7C8D9E0F1G2H3	thuthu01@elibrary.edu.vn	Trần Thị Thủ Thư	ROLE_LIBRARIAN	t	2026-06-04 21:08:08.164871	2026-06-04 21:08:08.164871
-3	student_vku	$2a$10$dXJ3Z6bQ7G9bX8Yf1A2bC.e8V0uO1w2x3y4z5A6B7C8D9E0F1G2H3	sinhvienvku@elibrary.edu.vn	Lê Văn Sinh Viên	ROLE_USER	t	2026-06-04 21:08:08.164871	2026-06-04 21:08:08.164871
-\.
+INSERT INTO public.users VALUES (1, 'admin_sys', '$2a$10$dXJ3Z6bQ7G9bX8Yf1A2bC.e8V0uO1w2x3y4z5A6B7C8D9E0F1G2H3', 'admin@elibrary.edu.vn', 'Nguyễn Quản Trị Hệ Thống', 'ROLE_ADMIN', true, '2026-06-04 21:08:08.164871', '2026-06-04 21:08:08.164871');
+INSERT INTO public.users VALUES (2, 'librarian_01', '$2a$10$dXJ3Z6bQ7G9bX8Yf1A2bC.e8V0uO1w2x3y4z5A6B7C8D9E0F1G2H3', 'thuthu01@elibrary.edu.vn', 'Trần Thị Thủ Thư', 'ROLE_LIBRARIAN', true, '2026-06-04 21:08:08.164871', '2026-06-04 21:08:08.164871');
+INSERT INTO public.users VALUES (3, 'student_vku', '$2a$10$dXJ3Z6bQ7G9bX8Yf1A2bC.e8V0uO1w2x3y4z5A6B7C8D9E0F1G2H3', 'sinhvienvku@elibrary.edu.vn', 'Lê Văn Sinh Viên', 'ROLE_USER', true, '2026-06-04 21:08:08.164871', '2026-06-04 21:08:08.164871');
+INSERT INTO public.users VALUES (4, 'tan_sinh_vien_01', '$2a$10$yxJa0fEvIqOSB7wrmFC2K.eGnnuteL5WgE6m5kwlGKm8Nn0btS7C6', 'tansinhvien@vku.udn.vn', 'Nguyễn Tân Sinh Viên', 'ROLE_USER', true, '2026-06-14 15:04:50.456631', '2026-06-14 15:04:50.456631');
 
 
 --
--- TOC entry 5095 (class 0 OID 0)
+-- TOC entry 5096 (class 0 OID 0)
 -- Dependencies: 238
--- Name: audit_logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: audit_logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.audit_logs_id_seq', 1, false);
 
 
 --
--- TOC entry 5096 (class 0 OID 0)
+-- TOC entry 5097 (class 0 OID 0)
 -- Dependencies: 221
--- Name: authors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: authors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.authors_id_seq', 1, false);
 
 
 --
--- TOC entry 5097 (class 0 OID 0)
--- Dependencies: 226
--- Name: book_copies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.book_copies_id_seq', 1, false);
-
-
---
 -- TOC entry 5098 (class 0 OID 0)
--- Dependencies: 219
--- Name: books_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Dependencies: 226
+-- Name: book_copies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.books_id_seq', 1, false);
+SELECT pg_catalog.setval('public.book_copies_id_seq', 10, true);
 
 
 --
 -- TOC entry 5099 (class 0 OID 0)
--- Dependencies: 228
--- Name: borrowings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Dependencies: 219
+-- Name: books_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.borrowings_id_seq', 1, false);
+SELECT pg_catalog.setval('public.books_id_seq', 1, true);
 
 
 --
 -- TOC entry 5100 (class 0 OID 0)
+-- Dependencies: 228
+-- Name: borrowings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.borrowings_id_seq', 1, true);
+
+
+--
+-- TOC entry 5101 (class 0 OID 0)
 -- Dependencies: 224
--- Name: branches_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: branches_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.branches_id_seq', 2, true);
 
 
 --
--- TOC entry 5101 (class 0 OID 0)
+-- TOC entry 5102 (class 0 OID 0)
 -- Dependencies: 217
--- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.categories_id_seq', 4, true);
 
 
 --
--- TOC entry 5102 (class 0 OID 0)
--- Dependencies: 230
--- Name: fines_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.fines_id_seq', 1, false);
-
-
---
 -- TOC entry 5103 (class 0 OID 0)
+-- Dependencies: 230
+-- Name: fines_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.fines_id_seq', 3, true);
+
+
+--
+-- TOC entry 5104 (class 0 OID 0)
 -- Dependencies: 234
--- Name: reading_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: reading_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.reading_history_id_seq', 1, false);
 
 
 --
--- TOC entry 5104 (class 0 OID 0)
+-- TOC entry 5105 (class 0 OID 0)
 -- Dependencies: 242
--- Name: recommendations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: recommendations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.recommendations_id_seq', 1, false);
 
 
 --
--- TOC entry 5105 (class 0 OID 0)
+-- TOC entry 5106 (class 0 OID 0)
 -- Dependencies: 232
--- Name: reviews_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: reviews_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.reviews_id_seq', 1, false);
 
 
 --
--- TOC entry 5106 (class 0 OID 0)
+-- TOC entry 5107 (class 0 OID 0)
 -- Dependencies: 240
--- Name: user_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: user_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.user_preferences_id_seq', 1, false);
 
 
 --
--- TOC entry 5107 (class 0 OID 0)
+-- TOC entry 5108 (class 0 OID 0)
 -- Dependencies: 215
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.users_id_seq', 3, true);
+SELECT pg_catalog.setval('public.users_id_seq', 4, true);
 
 
 --
 -- TOC entry 4881 (class 2606 OID 17124)
--- Name: audit_logs audit_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: audit_logs audit_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.audit_logs
@@ -1011,7 +939,7 @@ ALTER TABLE ONLY public.audit_logs
 
 --
 -- TOC entry 4852 (class 2606 OID 16977)
--- Name: authors authors_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: authors authors_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.authors
@@ -1020,7 +948,7 @@ ALTER TABLE ONLY public.authors
 
 --
 -- TOC entry 4876 (class 2606 OID 17101)
--- Name: blockchain_ledger blockchain_ledger_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: blockchain_ledger blockchain_ledger_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.blockchain_ledger
@@ -1029,7 +957,7 @@ ALTER TABLE ONLY public.blockchain_ledger
 
 --
 -- TOC entry 4879 (class 2606 OID 17109)
--- Name: blockchain_transactions blockchain_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: blockchain_transactions blockchain_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.blockchain_transactions
@@ -1038,7 +966,7 @@ ALTER TABLE ONLY public.blockchain_transactions
 
 --
 -- TOC entry 4854 (class 2606 OID 16982)
--- Name: book_authors book_authors_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: book_authors book_authors_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.book_authors
@@ -1047,7 +975,7 @@ ALTER TABLE ONLY public.book_authors
 
 --
 -- TOC entry 4860 (class 2606 OID 17011)
--- Name: book_copies book_copies_barcode_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: book_copies book_copies_barcode_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.book_copies
@@ -1056,7 +984,7 @@ ALTER TABLE ONLY public.book_copies
 
 --
 -- TOC entry 4862 (class 2606 OID 17009)
--- Name: book_copies book_copies_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: book_copies book_copies_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.book_copies
@@ -1065,7 +993,7 @@ ALTER TABLE ONLY public.book_copies
 
 --
 -- TOC entry 4847 (class 2606 OID 16962)
--- Name: books books_isbn_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: books books_isbn_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.books
@@ -1074,7 +1002,7 @@ ALTER TABLE ONLY public.books
 
 --
 -- TOC entry 4849 (class 2606 OID 16960)
--- Name: books books_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: books books_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.books
@@ -1083,7 +1011,7 @@ ALTER TABLE ONLY public.books
 
 --
 -- TOC entry 4865 (class 2606 OID 17030)
--- Name: borrowings borrowings_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: borrowings borrowings_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.borrowings
@@ -1092,7 +1020,7 @@ ALTER TABLE ONLY public.borrowings
 
 --
 -- TOC entry 4856 (class 2606 OID 17001)
--- Name: branches branches_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: branches branches_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.branches
@@ -1101,7 +1029,7 @@ ALTER TABLE ONLY public.branches
 
 --
 -- TOC entry 4858 (class 2606 OID 16999)
--- Name: branches branches_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: branches branches_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.branches
@@ -1110,7 +1038,7 @@ ALTER TABLE ONLY public.branches
 
 --
 -- TOC entry 4843 (class 2606 OID 16950)
--- Name: categories categories_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: categories categories_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.categories
@@ -1119,7 +1047,7 @@ ALTER TABLE ONLY public.categories
 
 --
 -- TOC entry 4845 (class 2606 OID 16948)
--- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.categories
@@ -1128,7 +1056,7 @@ ALTER TABLE ONLY public.categories
 
 --
 -- TOC entry 4868 (class 2606 OID 17049)
--- Name: fines fines_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: fines fines_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.fines
@@ -1137,7 +1065,7 @@ ALTER TABLE ONLY public.fines
 
 --
 -- TOC entry 4872 (class 2606 OID 17084)
--- Name: reading_history reading_history_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: reading_history reading_history_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.reading_history
@@ -1146,7 +1074,7 @@ ALTER TABLE ONLY public.reading_history
 
 --
 -- TOC entry 4886 (class 2606 OID 17156)
--- Name: recommendations recommendations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recommendations recommendations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.recommendations
@@ -1155,7 +1083,7 @@ ALTER TABLE ONLY public.recommendations
 
 --
 -- TOC entry 4870 (class 2606 OID 17065)
--- Name: reviews reviews_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: reviews reviews_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.reviews
@@ -1164,7 +1092,7 @@ ALTER TABLE ONLY public.reviews
 
 --
 -- TOC entry 4874 (class 2606 OID 17086)
--- Name: reading_history uq_user_book_history; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: reading_history uq_user_book_history; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.reading_history
@@ -1173,7 +1101,7 @@ ALTER TABLE ONLY public.reading_history
 
 --
 -- TOC entry 4883 (class 2606 OID 17138)
--- Name: user_preferences user_preferences_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user_preferences user_preferences_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.user_preferences
@@ -1182,7 +1110,7 @@ ALTER TABLE ONLY public.user_preferences
 
 --
 -- TOC entry 4837 (class 2606 OID 16938)
--- Name: users users_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: users users_email_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -1191,7 +1119,7 @@ ALTER TABLE ONLY public.users
 
 --
 -- TOC entry 4839 (class 2606 OID 16934)
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -1200,7 +1128,7 @@ ALTER TABLE ONLY public.users
 
 --
 -- TOC entry 4841 (class 2606 OID 16936)
--- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -1209,7 +1137,7 @@ ALTER TABLE ONLY public.users
 
 --
 -- TOC entry 4863 (class 1259 OID 17022)
--- Name: idx_barcode; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_barcode; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_barcode ON public.book_copies USING btree (barcode);
@@ -1217,7 +1145,7 @@ CREATE INDEX idx_barcode ON public.book_copies USING btree (barcode);
 
 --
 -- TOC entry 4877 (class 1259 OID 17102)
--- Name: idx_blocks; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_blocks; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_blocks ON public.blockchain_ledger USING btree (current_hash);
@@ -1225,7 +1153,7 @@ CREATE INDEX idx_blocks ON public.blockchain_ledger USING btree (current_hash);
 
 --
 -- TOC entry 4850 (class 1259 OID 16968)
--- Name: idx_book_search; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_book_search; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_book_search ON public.books USING btree (title, isbn);
@@ -1233,7 +1161,7 @@ CREATE INDEX idx_book_search ON public.books USING btree (title, isbn);
 
 --
 -- TOC entry 4866 (class 1259 OID 17041)
--- Name: idx_borrow_dates; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_borrow_dates; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_borrow_dates ON public.borrowings USING btree (borrow_date, due_date);
@@ -1241,7 +1169,7 @@ CREATE INDEX idx_borrow_dates ON public.borrowings USING btree (borrow_date, due
 
 --
 -- TOC entry 4835 (class 1259 OID 16939)
--- Name: idx_user_auth; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_user_auth; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_user_auth ON public.users USING btree (username, status);
@@ -1249,15 +1177,24 @@ CREATE INDEX idx_user_auth ON public.users USING btree (username, status);
 
 --
 -- TOC entry 4884 (class 1259 OID 17167)
--- Name: idx_user_rec; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_user_rec; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_user_rec ON public.recommendations USING btree (user_id, score DESC);
 
 
 --
+-- TOC entry 4894 (class 2606 OID 24576)
+-- Name: fines fk96m5dw0wvbckhnnwfeynue15y; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.fines
+    ADD CONSTRAINT fk96m5dw0wvbckhnnwfeynue15y FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
 -- TOC entry 4888 (class 2606 OID 16988)
--- Name: book_authors fk_ba_authors; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: book_authors fk_ba_authors; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.book_authors
@@ -1266,7 +1203,7 @@ ALTER TABLE ONLY public.book_authors
 
 --
 -- TOC entry 4889 (class 2606 OID 16983)
--- Name: book_authors fk_ba_books; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: book_authors fk_ba_books; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.book_authors
@@ -1275,7 +1212,7 @@ ALTER TABLE ONLY public.book_authors
 
 --
 -- TOC entry 4887 (class 2606 OID 16963)
--- Name: books fk_books_categories; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: books fk_books_categories; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.books
@@ -1284,7 +1221,7 @@ ALTER TABLE ONLY public.books
 
 --
 -- TOC entry 4892 (class 2606 OID 17036)
--- Name: borrowings fk_borrowings_copies; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: borrowings fk_borrowings_copies; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.borrowings
@@ -1293,7 +1230,7 @@ ALTER TABLE ONLY public.borrowings
 
 --
 -- TOC entry 4893 (class 2606 OID 17031)
--- Name: borrowings fk_borrowings_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: borrowings fk_borrowings_users; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.borrowings
@@ -1301,8 +1238,8 @@ ALTER TABLE ONLY public.borrowings
 
 
 --
--- TOC entry 4899 (class 2606 OID 17110)
--- Name: blockchain_transactions fk_bt_ledger; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4900 (class 2606 OID 17110)
+-- Name: blockchain_transactions fk_bt_ledger; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.blockchain_transactions
@@ -1311,7 +1248,7 @@ ALTER TABLE ONLY public.blockchain_transactions
 
 --
 -- TOC entry 4890 (class 2606 OID 17012)
--- Name: book_copies fk_copies_books; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: book_copies fk_copies_books; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.book_copies
@@ -1320,7 +1257,7 @@ ALTER TABLE ONLY public.book_copies
 
 --
 -- TOC entry 4891 (class 2606 OID 17017)
--- Name: book_copies fk_copies_branches; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: book_copies fk_copies_branches; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.book_copies
@@ -1328,8 +1265,8 @@ ALTER TABLE ONLY public.book_copies
 
 
 --
--- TOC entry 4894 (class 2606 OID 17050)
--- Name: fines fk_fines_borrowings; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4895 (class 2606 OID 17050)
+-- Name: fines fk_fines_borrowings; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.fines
@@ -1337,8 +1274,8 @@ ALTER TABLE ONLY public.fines
 
 
 --
--- TOC entry 4900 (class 2606 OID 17125)
--- Name: audit_logs fk_logs_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4901 (class 2606 OID 17125)
+-- Name: audit_logs fk_logs_users; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.audit_logs
@@ -1346,8 +1283,8 @@ ALTER TABLE ONLY public.audit_logs
 
 
 --
--- TOC entry 4903 (class 2606 OID 17162)
--- Name: recommendations fk_rec_books; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4904 (class 2606 OID 17162)
+-- Name: recommendations fk_rec_books; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.recommendations
@@ -1355,8 +1292,8 @@ ALTER TABLE ONLY public.recommendations
 
 
 --
--- TOC entry 4904 (class 2606 OID 17157)
--- Name: recommendations fk_rec_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4905 (class 2606 OID 17157)
+-- Name: recommendations fk_rec_users; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.recommendations
@@ -1364,8 +1301,8 @@ ALTER TABLE ONLY public.recommendations
 
 
 --
--- TOC entry 4895 (class 2606 OID 17071)
--- Name: reviews fk_reviews_books; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4896 (class 2606 OID 17071)
+-- Name: reviews fk_reviews_books; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.reviews
@@ -1373,8 +1310,8 @@ ALTER TABLE ONLY public.reviews
 
 
 --
--- TOC entry 4896 (class 2606 OID 17066)
--- Name: reviews fk_reviews_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4897 (class 2606 OID 17066)
+-- Name: reviews fk_reviews_users; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.reviews
@@ -1382,8 +1319,8 @@ ALTER TABLE ONLY public.reviews
 
 
 --
--- TOC entry 4897 (class 2606 OID 17092)
--- Name: reading_history fk_rh_books; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4898 (class 2606 OID 17092)
+-- Name: reading_history fk_rh_books; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.reading_history
@@ -1391,8 +1328,8 @@ ALTER TABLE ONLY public.reading_history
 
 
 --
--- TOC entry 4898 (class 2606 OID 17087)
--- Name: reading_history fk_rh_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4899 (class 2606 OID 17087)
+-- Name: reading_history fk_rh_users; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.reading_history
@@ -1400,8 +1337,8 @@ ALTER TABLE ONLY public.reading_history
 
 
 --
--- TOC entry 4901 (class 2606 OID 17144)
--- Name: user_preferences fk_up_categories; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4902 (class 2606 OID 17144)
+-- Name: user_preferences fk_up_categories; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.user_preferences
@@ -1409,19 +1346,19 @@ ALTER TABLE ONLY public.user_preferences
 
 
 --
--- TOC entry 4902 (class 2606 OID 17139)
--- Name: user_preferences fk_up_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 4903 (class 2606 OID 17139)
+-- Name: user_preferences fk_up_users; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.user_preferences
     ADD CONSTRAINT fk_up_users FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE;
 
 
--- Completed on 2026-06-04 21:19:46
+-- Completed on 2026-06-20 01:26:14
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict HnNAlVZlamILzJBnIHjWr01LB5EGt2pBDgZCX3Hk9wKBcehUoJmotlJCMUE4wXG
+\unrestrict D3gXhe0057HKcqGLGIBE2NmHMRSkgQvddbCSkZHt0xNBM44uTb3MtRVbXqByGRr
 
