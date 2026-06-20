@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict D3gXhe0057HKcqGLGIBE2NmHMRSkgQvddbCSkZHt0xNBM44uTb3MtRVbXqByGRr
+\restrict Wdy3UdEcIDOMAjmlD8eL3Rdeb4AzkFMRG9gI8rdjvyHRudw1wC9gY6B8gQYCfei
 
 -- Dumped from database version 16.14
 -- Dumped by pg_dump version 16.14
 
--- Started on 2026-06-20 01:26:13
+-- Started on 2026-06-20 15:21:52
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -680,6 +680,8 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 -- Data for Name: blockchain_ledger; Type: TABLE DATA; Schema: public; Owner: -
 --
 
+INSERT INTO public.blockchain_ledger VALUES (1, 1781942108663, 1, '0000000000000000000000000000000000000000000000000000000000000000', '8f9c5595db198563540b38fa5f96dcfa2e76f500d15841a3a37c9412b12ad330');
+INSERT INTO public.blockchain_ledger VALUES (2, 1781942184640, 1, '8f9c5595db198563540b38fa5f96dcfa2e76f500d15841a3a37c9412b12ad330', '1f15e2907bc8a67e57268b69cb3b8e09df8c0d48ac03ba3d3540ce82de7c2975');
 
 
 --
@@ -688,6 +690,8 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 -- Data for Name: blockchain_transactions; Type: TABLE DATA; Schema: public; Owner: -
 --
 
+INSERT INTO public.blockchain_transactions VALUES ('dee5175e4e3b48963e9d827b1d0a2dc7955c97af719c01d453ff6c12904c3442', 1, 'BORROWING', 2, '{"action":"RETURN", "userId":4, "bookCopyId":1, "returnDate":"2026-06-20"}');
+INSERT INTO public.blockchain_transactions VALUES ('910d60a521233dc30a06af7d1c1bb708d69c0d2dc8dfddb07fb621638116f13d', 2, 'BORROWING', 3, '{"action":"RETURN", "userId":4, "bookCopyId":1, "returnDate":"2026-06-20"}');
 
 
 --
@@ -704,7 +708,6 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 -- Data for Name: book_copies; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.book_copies VALUES (1, 1, 1, 'LIB-B1-7233D799', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (2, 1, 1, 'LIB-B1-8DD18058', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (3, 1, 1, 'LIB-B1-101521F6', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (4, 1, 1, 'LIB-B1-FF1F4FEB', 'AVAILABLE');
@@ -714,6 +717,7 @@ INSERT INTO public.book_copies VALUES (8, 1, 1, 'LIB-B1-987526F0', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (9, 1, 1, 'LIB-B1-5DFC0074', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (10, 1, 1, 'LIB-B1-1E937614', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (6, 1, 1, 'LIB-B1-209E8A75', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (1, 1, 1, 'LIB-B1-7233D799', 'AVAILABLE');
 
 
 --
@@ -732,6 +736,8 @@ INSERT INTO public.books VALUES (1, 1, 'Lập Trình Spring Boot Từ A-Z', 'ISB
 --
 
 INSERT INTO public.borrowings VALUES (1, 4, 6, '2026-06-14', '2026-06-01', '2026-06-19', 'RETURNED', NULL, NULL);
+INSERT INTO public.borrowings VALUES (2, 4, 1, '2026-06-20', '2026-07-04', '2026-06-20', 'RETURNED', 'dee5175e4e3b48963e9d827b1d0a2dc7955c97af719c01d453ff6c12904c3442', NULL);
+INSERT INTO public.borrowings VALUES (3, 4, 1, '2026-06-20', '2026-07-04', '2026-06-20', 'RETURNED', '910d60a521233dc30a06af7d1c1bb708d69c0d2dc8dfddb07fb621638116f13d', NULL);
 
 
 --
@@ -853,7 +859,7 @@ SELECT pg_catalog.setval('public.books_id_seq', 1, true);
 -- Name: borrowings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.borrowings_id_seq', 1, true);
+SELECT pg_catalog.setval('public.borrowings_id_seq', 3, true);
 
 
 --
@@ -1354,11 +1360,11 @@ ALTER TABLE ONLY public.user_preferences
     ADD CONSTRAINT fk_up_users FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE;
 
 
--- Completed on 2026-06-20 01:26:14
+-- Completed on 2026-06-20 15:21:53
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict D3gXhe0057HKcqGLGIBE2NmHMRSkgQvddbCSkZHt0xNBM44uTb3MtRVbXqByGRr
+\unrestrict Wdy3UdEcIDOMAjmlD8eL3Rdeb4AzkFMRG9gI8rdjvyHRudw1wC9gY6B8gQYCfei
 
