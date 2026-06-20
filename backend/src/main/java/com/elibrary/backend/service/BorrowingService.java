@@ -54,7 +54,22 @@ public class BorrowingService {
         borrowing.setDueDate(LocalDate.now().plusDays(request.durationDays()));
         borrowing.setStatus("BORROWING");
 
-        return borrowingRepository.save(borrowing);
+        // 1. Phải lưu phiếu mượn trước để Database tự động sinh ra ID (borrowingId)
+        Borrowing savedBorrowing = borrowingRepository.save(borrowing);
+
+        // 2. Đóng gói dữ liệu Payload (Ghi chú rõ đây là hành động BORROW)
+        String payload = String.format(
+                "{\"action\":\"BORROW\", \"userId\":%d, \"bookCopyId\":%d, \"borrowDate\":\"%s\", \"dueDate\":\"%s\"}",
+                savedBorrowing.getUser().getId(), savedBorrowing.getBookCopy().getId(), savedBorrowing.getBorrowDate(),
+                savedBorrowing.getDueDate());
+
+        // 3. Ghi nhận lên Blockchain
+        String txHash = blockchainService.recordTransaction("BORROWING", savedBorrowing.getId(), payload);
+
+        // 4. Gắn mã Hash vào phiếu mượn và cập nhật lại Database
+        savedBorrowing.setTxHash(txHash);
+
+        return borrowingRepository.save(savedBorrowing);
     }
 
     @Transactional
