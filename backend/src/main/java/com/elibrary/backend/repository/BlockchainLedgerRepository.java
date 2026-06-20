@@ -8,4 +8,6 @@ public interface BlockchainLedgerRepository extends JpaRepository<BlockchainLedg
     Optional<BlockchainLedger> findByCurrentHash(String currentHash);
 
     Optional<BlockchainLedger> findFirstByOrderByBlockIndexDesc();
+
+    Optional<BlockchainLedger> findTopByOrderByBlockIndexDesc();
 }

@@ -25,6 +25,7 @@ public class BorrowingService {
     private final BookCopyRepository bookCopyRepository;
     private final UserRepository userRepository;
     private final FineRepository fineRepository;
+    private final BlockchainService blockchainService;
 
     @Transactional
     public Borrowing borrowBook(BorrowingRequest request) {
@@ -83,6 +84,14 @@ public class BorrowingService {
             fine.setStatus("UNPAID");
             fineRepository.save(fine);
         }
+
+        String payload = String.format(
+                "{\"action\":\"RETURN\", \"userId\":%d, \"bookCopyId\":%d, \"returnDate\":\"%s\"}",
+                borrowing.getUser().getId(), borrowing.getBookCopy().getId(), borrowing.getReturnDate());
+
+        String txHash = blockchainService.recordTransaction("BORROWING", borrowing.getId(), payload);
+
+        borrowing.setTxHash(txHash);
 
         return borrowingRepository.save(borrowing);
     }
