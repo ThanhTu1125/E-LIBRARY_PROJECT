@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict x9hXVyk82GbVqTlrJ10UYNzMzHHoaX7b8C4XHkUjvNmtIdl2szpJgem6X6PuIoX
+\restrict 35gXciXB6KZ2dTr6sbobGg1549Sfi88sUaFucRo3yHRhbs075iISp7uM7VrNhUR
 
 -- Dumped from database version 16.14
 -- Dumped by pg_dump version 16.14
 
--- Started on 2026-06-20 20:28:36
+-- Started on 2026-06-22 00:04:40
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -690,6 +690,8 @@ INSERT INTO public.blockchain_ledger VALUES (7, 1781961124706, 1, '18f1b3cd369e9
 INSERT INTO public.blockchain_ledger VALUES (8, 1781961677222, 1, '54a86b3553caa5f866e9f41a6e2a943097fad90e450047a4bb33683494de1c7f', 'fe0fcf76519418bb480a41756db2cfa9190788b07d9a257634fc9606e023f8b7');
 INSERT INTO public.blockchain_ledger VALUES (9, 1781961713156, 1, 'fe0fcf76519418bb480a41756db2cfa9190788b07d9a257634fc9606e023f8b7', '8e5cb3d7cc37a84868bcd97ea5008bd913f6b5c9e76efd61288833679bd5db1e');
 INSERT INTO public.blockchain_ledger VALUES (10, 1781961720995, 1, '8e5cb3d7cc37a84868bcd97ea5008bd913f6b5c9e76efd61288833679bd5db1e', '4e6eb3eb2b8470746e04d13a64f839df4583a4882ee6eae62e6f0ee2eefbacf4');
+INSERT INTO public.blockchain_ledger VALUES (11, 1782056234949, 1, '4e6eb3eb2b8470746e04d13a64f839df4583a4882ee6eae62e6f0ee2eefbacf4', '9a800d3adbbb3fa17565f6ce0eb6b34ded263333cc53cef42e64cc01083c62a0');
+INSERT INTO public.blockchain_ledger VALUES (12, 1782057919538, 1, '9a800d3adbbb3fa17565f6ce0eb6b34ded263333cc53cef42e64cc01083c62a0', '11eb81764834af505ec187bca8d18703365f4d9f718d710f2b932c44dbe2246d');
 
 
 --
@@ -708,6 +710,8 @@ INSERT INTO public.blockchain_transactions VALUES ('24965d1a4722c70731bd9722bfa4
 INSERT INTO public.blockchain_transactions VALUES ('df19e90ccf7b7856ba56956919ba6f2f1534008303e19f724839699f255bedfe', 8, 'BORROWING', 5, '{"action":"RETURN", "userId":4, "bookCopyId":1, "returnDate":"2026-06-20"}');
 INSERT INTO public.blockchain_transactions VALUES ('4c3359c9754f7bee9f9c59608a2dc24a91983cc19aec093f68d4045fe73ad9ec', 9, 'BORROWING', 6, '{"action":"RETURN", "userId":4, "bookCopyId":3, "returnDate":"2026-06-20"}');
 INSERT INTO public.blockchain_transactions VALUES ('481ddaa48916aa95c4cce085a18623e6d3f10b2d5447dcaa9854ddf2dd7b7f4e', 10, 'BORROWING', 7, '{"action":"RETURN", "userId":4, "bookCopyId":2, "returnDate":"2026-06-20"}');
+INSERT INTO public.blockchain_transactions VALUES ('250bd16477f6b418309079b93d16483a6ba59465a303dbb327093e8d770a36db', 11, 'BORROWING', 8, '{"action":"BORROW", "userId":5, "bookCopyId":3, "borrowDate":"2026-06-21", "dueDate":"2026-06-28"}');
+INSERT INTO public.blockchain_transactions VALUES ('f23a65ac2f468dee9f8be70fd3ad6b50e4b6ec5b0f57edf468138438db0d2d92', 12, 'BORROWING', 9, '{"action":"BORROW", "userId":5, "bookCopyId":5, "borrowDate":"2026-06-21", "dueDate":"2026-06-28"}');
 
 
 --
@@ -725,15 +729,15 @@ INSERT INTO public.blockchain_transactions VALUES ('481ddaa48916aa95c4cce085a186
 --
 
 INSERT INTO public.book_copies VALUES (4, 1, 1, 'LIB-B1-FF1F4FEB', 'AVAILABLE');
-INSERT INTO public.book_copies VALUES (5, 1, 1, 'LIB-B1-3C3F5AF6', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (7, 1, 1, 'LIB-B1-EF89D0CC', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (8, 1, 1, 'LIB-B1-987526F0', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (9, 1, 1, 'LIB-B1-5DFC0074', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (10, 1, 1, 'LIB-B1-1E937614', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (6, 1, 1, 'LIB-B1-209E8A75', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (1, 1, 1, 'LIB-B1-7233D799', 'AVAILABLE');
-INSERT INTO public.book_copies VALUES (3, 1, 1, 'LIB-B1-101521F6', 'AVAILABLE');
 INSERT INTO public.book_copies VALUES (2, 1, 1, 'LIB-B1-8DD18058', 'AVAILABLE');
+INSERT INTO public.book_copies VALUES (3, 1, 1, 'LIB-B1-101521F6', 'BORROWED');
+INSERT INTO public.book_copies VALUES (5, 1, 1, 'LIB-B1-3C3F5AF6', 'BORROWED');
 
 
 --
@@ -758,6 +762,8 @@ INSERT INTO public.borrowings VALUES (4, 4, 2, '2026-06-20', '2026-06-27', '2026
 INSERT INTO public.borrowings VALUES (5, 4, 1, '2026-06-20', '2026-06-27', '2026-06-20', 'RETURNED', 'df19e90ccf7b7856ba56956919ba6f2f1534008303e19f724839699f255bedfe', NULL);
 INSERT INTO public.borrowings VALUES (6, 4, 3, '2026-06-20', '2026-06-27', '2026-06-20', 'RETURNED', '4c3359c9754f7bee9f9c59608a2dc24a91983cc19aec093f68d4045fe73ad9ec', NULL);
 INSERT INTO public.borrowings VALUES (7, 4, 2, '2026-06-20', '2026-06-23', '2026-06-20', 'RETURNED', '481ddaa48916aa95c4cce085a18623e6d3f10b2d5447dcaa9854ddf2dd7b7f4e', NULL);
+INSERT INTO public.borrowings VALUES (8, 5, 3, '2026-06-21', '2026-06-28', NULL, 'BORROWING', '250bd16477f6b418309079b93d16483a6ba59465a303dbb327093e8d770a36db', NULL);
+INSERT INTO public.borrowings VALUES (9, 5, 5, '2026-06-21', '2026-06-28', NULL, 'BORROWING', 'f23a65ac2f468dee9f8be70fd3ad6b50e4b6ec5b0f57edf468138438db0d2d92', NULL);
 
 
 --
@@ -835,6 +841,7 @@ INSERT INTO public.users VALUES (1, 'admin_sys', '$2a$10$dXJ3Z6bQ7G9bX8Yf1A2bC.e
 INSERT INTO public.users VALUES (2, 'librarian_01', '$2a$10$dXJ3Z6bQ7G9bX8Yf1A2bC.e8V0uO1w2x3y4z5A6B7C8D9E0F1G2H3', 'thuthu01@elibrary.edu.vn', 'Trần Thị Thủ Thư', 'ROLE_LIBRARIAN', true, '2026-06-04 21:08:08.164871', '2026-06-04 21:08:08.164871');
 INSERT INTO public.users VALUES (3, 'student_vku', '$2a$10$dXJ3Z6bQ7G9bX8Yf1A2bC.e8V0uO1w2x3y4z5A6B7C8D9E0F1G2H3', 'sinhvienvku@elibrary.edu.vn', 'Lê Văn Sinh Viên', 'ROLE_USER', true, '2026-06-04 21:08:08.164871', '2026-06-04 21:08:08.164871');
 INSERT INTO public.users VALUES (4, 'tan_sinh_vien_01', '$2a$10$yxJa0fEvIqOSB7wrmFC2K.eGnnuteL5WgE6m5kwlGKm8Nn0btS7C6', 'tansinhvien@vku.udn.vn', 'Nguyễn Tân Sinh Viên', 'ROLE_USER', true, '2026-06-14 15:04:50.456631', '2026-06-14 15:04:50.456631');
+INSERT INTO public.users VALUES (5, 'hacker_lord', '$2a$10$8MeC1tThPdeDPq6PSEXxfOV7IAjlfwReE7BwWeyTNVKNG3cHIwPA6', 'hacker@gmail.com', 'Mr Hacker', 'ROLE_USER', true, '2026-06-21 22:34:02.919833', '2026-06-21 22:34:02.919833');
 
 
 --
@@ -879,7 +886,7 @@ SELECT pg_catalog.setval('public.books_id_seq', 1, true);
 -- Name: borrowings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.borrowings_id_seq', 7, true);
+SELECT pg_catalog.setval('public.borrowings_id_seq', 9, true);
 
 
 --
@@ -951,7 +958,7 @@ SELECT pg_catalog.setval('public.user_preferences_id_seq', 1, false);
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.users_id_seq', 4, true);
+SELECT pg_catalog.setval('public.users_id_seq', 5, true);
 
 
 --
@@ -1380,11 +1387,11 @@ ALTER TABLE ONLY public.user_preferences
     ADD CONSTRAINT fk_up_users FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE;
 
 
--- Completed on 2026-06-20 20:28:37
+-- Completed on 2026-06-22 00:04:40
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict x9hXVyk82GbVqTlrJ10UYNzMzHHoaX7b8C4XHkUjvNmtIdl2szpJgem6X6PuIoX
+\unrestrict 35gXciXB6KZ2dTr6sbobGg1549Sfi88sUaFucRo3yHRhbs075iISp7uM7VrNhUR
 
