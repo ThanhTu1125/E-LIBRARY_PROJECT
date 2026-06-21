@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.lang.NonNull;
+import java.security.Principal;
 
 @RestController
 @RequestMapping("/api/borrowings")
@@ -16,9 +17,11 @@ public class BorrowingController {
     private final BorrowingService borrowingService;
 
     @PostMapping
-    public ResponseEntity<?> borrowBook(@RequestBody BorrowingRequest request) {
+    // Tiêm thêm Principal vào đây. Spring Security sẽ tự động lấy từ Token JWT!
+    public ResponseEntity<?> borrowBook(@RequestBody BorrowingRequest request, Principal principal) {
         try {
-            return ResponseEntity.ok(borrowingService.borrowBook(request));
+            // principal.getName() chính là username của người đang cầm thẻ!
+            return ResponseEntity.ok(borrowingService.borrowBook(request, principal.getName()));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

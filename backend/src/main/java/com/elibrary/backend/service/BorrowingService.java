@@ -28,10 +28,10 @@ public class BorrowingService {
     private final BlockchainService blockchainService;
 
     @Transactional
-    public Borrowing borrowBook(BorrowingRequest request) {
+    public Borrowing borrowBook(BorrowingRequest request, String username) {
 
-        User user = userRepository.findById(request.userId())
-                .orElseThrow(() -> new RuntimeException("Thẻ thư viện không tồn tại!"));
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("Tài khoản không tồn tại trong hệ thống!"));
 
         if (!user.isStatus()) {
             throw new RuntimeException("Tài khoản của bro đã bị khóa, không thể mượn sách!");
@@ -54,19 +54,19 @@ public class BorrowingService {
         borrowing.setDueDate(LocalDate.now().plusDays(request.durationDays()));
         borrowing.setStatus("BORROWING");
 
-        // 1. Phải lưu phiếu mượn trước để Database tự động sinh ra ID (borrowingId)
+        // 1. Lưu phiếu mượn
         Borrowing savedBorrowing = borrowingRepository.save(borrowing);
 
-        // 2. Đóng gói dữ liệu Payload (Ghi chú rõ đây là hành động BORROW)
+        // 2. Đóng gói Payload (Dùng đúng ID của User đang thao tác)
         String payload = String.format(
                 "{\"action\":\"BORROW\", \"userId\":%d, \"bookCopyId\":%d, \"borrowDate\":\"%s\", \"dueDate\":\"%s\"}",
                 savedBorrowing.getUser().getId(), savedBorrowing.getBookCopy().getId(), savedBorrowing.getBorrowDate(),
                 savedBorrowing.getDueDate());
 
-        // 3. Ghi nhận lên Blockchain
+        // 3. Ghi Blockchain
         String txHash = blockchainService.recordTransaction("BORROWING", savedBorrowing.getId(), payload);
 
-        // 4. Gắn mã Hash vào phiếu mượn và cập nhật lại Database
+        // 4. Gắn Hash
         savedBorrowing.setTxHash(txHash);
 
         return borrowingRepository.save(savedBorrowing);

@@ -4,9 +4,11 @@ import com.elibrary.backend.dto.LoginRequest;
 import com.elibrary.backend.dto.RegisterRequest;
 import com.elibrary.backend.model.User;
 import com.elibrary.backend.service.AuthService;
+import com.elibrary.backend.utils.JwtUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -15,11 +17,11 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
     private final AuthService authService;
+    private final JwtUtils jwtUtils;
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody RegisterRequest request) {
         try {
-            // Chuyển dữ liệu từ DTO sang Entity
             User user = new User();
             user.setUsername(request.username());
             user.setPassword(request.password());
@@ -37,7 +39,12 @@ public class AuthController {
     public ResponseEntity<?> loginUser(@RequestBody LoginRequest request) {
         try {
             User user = authService.login(request.username(), request.password());
-            return ResponseEntity.ok(user);
+
+            String token = jwtUtils.generateToken(user.getUsername());
+
+            return ResponseEntity.ok(Map.of(
+                    "token", token,
+                    "user", user));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
