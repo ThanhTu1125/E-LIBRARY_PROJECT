@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict 35gXciXB6KZ2dTr6sbobGg1549Sfi88sUaFucRo3yHRhbs075iISp7uM7VrNhUR
+\restrict ReQuD3VIrlsCuHVVnHJ8iTDOhwb9C9oQ6jkXPfAFekMdjXbBsviTKP25RvDgfdE
 
 -- Dumped from database version 16.14
 -- Dumped by pg_dump version 16.14
 
--- Started on 2026-06-22 00:04:40
+-- Started on 2026-06-22 00:43:56
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -805,6 +805,7 @@ INSERT INTO public.fines VALUES (3, 1, 90000.00, 'UNPAID', NULL, 'Trả trễ 18
 -- Data for Name: reading_history; Type: TABLE DATA; Schema: public; Owner: -
 --
 
+INSERT INTO public.reading_history VALUES (1, 5, 1, 45, '2026-06-22 00:31:54.793527');
 
 
 --
@@ -821,6 +822,13 @@ INSERT INTO public.fines VALUES (3, 1, 90000.00, 'UNPAID', NULL, 'Trả trễ 18
 -- Data for Name: reviews; Type: TABLE DATA; Schema: public; Owner: -
 --
 
+INSERT INTO public.reviews VALUES (1, 5, 1, 5, 'Sách cực kỳ cuốn cuốn!', '2026-06-22 00:18:19.735908');
+INSERT INTO public.reviews VALUES (2, 5, 1, 4, 'Sách cực kỳ cuốn cuốn!', '2026-06-22 00:32:18.381428');
+INSERT INTO public.reviews VALUES (3, 5, 1, 4, 'Sách cực kỳ cuốn cuốn!', '2026-06-22 00:32:36.47969');
+INSERT INTO public.reviews VALUES (4, 5, 1, 4, 'Sách cực kỳ cuốn cuốn!', '2026-06-22 00:33:19.388266');
+INSERT INTO public.reviews VALUES (5, 5, 1, 4, 'Sách cực kỳ cuốn cuốn!', '2026-06-22 00:33:41.760169');
+INSERT INTO public.reviews VALUES (6, 5, 1, 5, 'Sách cực kỳ cuốn cuốn!', '2026-06-22 00:33:54.977197');
+INSERT INTO public.reviews VALUES (7, 5, 1, 4, 'Sách cực kỳ cuốn cuốn!', '2026-06-22 00:34:56.226093');
 
 
 --
@@ -922,7 +930,7 @@ SELECT pg_catalog.setval('public.fines_id_seq', 3, true);
 -- Name: reading_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.reading_history_id_seq', 1, false);
+SELECT pg_catalog.setval('public.reading_history_id_seq', 1, true);
 
 
 --
@@ -940,7 +948,7 @@ SELECT pg_catalog.setval('public.recommendations_id_seq', 1, false);
 -- Name: reviews_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.reviews_id_seq', 1, false);
+SELECT pg_catalog.setval('public.reviews_id_seq', 7, true);
 
 
 --
@@ -1387,11 +1395,11 @@ ALTER TABLE ONLY public.user_preferences
     ADD CONSTRAINT fk_up_users FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE;
 
 
--- Completed on 2026-06-22 00:04:40
+-- Completed on 2026-06-22 00:43:56
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 35gXciXB6KZ2dTr6sbobGg1549Sfi88sUaFucRo3yHRhbs075iISp7uM7VrNhUR
+\unrestrict ReQuD3VIrlsCuHVVnHJ8iTDOhwb9C9oQ6jkXPfAFekMdjXbBsviTKP25RvDgfdE
 

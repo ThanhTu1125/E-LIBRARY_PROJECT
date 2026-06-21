@@ -30,12 +30,11 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(cors -> cors.configure(http))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll() // Thả cửa Đăng nhập, Đăng ký
-                        .requestMatchers("/api/books/**", "/api/categories/**").permitAll() // Thả cửa xem sách
-                        .anyRequest().authenticated() // CẤM CỬA Mượn, Trả, Phạt... nếu không có Token
-                )
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/books/**", "/api/categories/**", "/api/reviews/book/**").permitAll()
+                        .anyRequest().authenticated())
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class); // Cắm gác cổng vào vị trí
+                .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
